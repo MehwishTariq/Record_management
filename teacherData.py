@@ -27,6 +27,8 @@ class TeacherData:
             add = input()
             print("\nEnter Contact: ")
             contact = input()
+
+            #cnic is supposed to be 13 digits long therefore keep a check on it
             while True:
                 print("\nEnter CNIC: ")
                 cnic = input()
@@ -36,9 +38,11 @@ class TeacherData:
                 else:
                     break
             
+            #create a dictionary to add to a list
             r_dict = {"Name": name, "Father's Name":f_name, "Gender":gen,
                              "Age": age, "Address": add,"Contact": contact,"CNIC":cnic}
             
+            #append to a list to add to db
             record_list.append(r_dict)
             
             print("\n Entered! Enter to add more users or Press 'q' to go back")
@@ -57,12 +61,10 @@ class TeacherData:
         
         while True:
             
-            print("\nEnter CNIC of teacher to delete his/her record: ")  
-            
+            print("\nEnter CNIC of teacher to delete his/her record: ")              
             cnic = input()
            
-            if len(cnic) == 13 : #since cnic is 14 digits
-        
+            if len(cnic) == 13 : #since cnic is 14 digits        
                 return cnic
             
             else:
@@ -73,14 +75,13 @@ class TeacherData:
     def update_data(self):
          
         _dict = {}
+
         while True:
-            
-            print("\nEnter CNIC of teacher to update his/her record: ")  
-            
+
+            print("\nEnter CNIC of teacher to update his/her record: ")              
             cnic = input()
            
-            if len(cnic) == 13 : #since cnic is 14 digits
-        
+            if len(cnic) == 13 : #since cnic is 14 digits        
                 while True:
                     
                     print("\nWhat would you like to update? Press\n")
@@ -131,15 +132,13 @@ class TeacherData:
                             continue
                     
                     click.clear()
-                    break
-                
+                    break                
                 break
                               
             else:
                 print("\nCNIC contains 13 digits, Please try again!")
                 continue
           
-        #print(_dict)
         return cnic,_dict
         
         

@@ -11,7 +11,7 @@ import logIn as lg
 import click
 import os
 
-
+#get path of the root directory for Accounts.xlsx file
 path = os.getcwd()
 
 print("\n\nLog In or Sign Up?\nPress:\n1: Login \n2: Signup\n\n")

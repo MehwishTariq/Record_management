@@ -2,10 +2,11 @@ import click
 
 class CourseTeacher:
     
-    #enter course teacher data save in a list of dictionaries and return the list     
+    #enter course teacher data , year when assigned and to which class     
     def record_Dict(self):
         
         _class = ''
+
         while True:
 
             print("\nEnter the Year of Assigning: ")
@@ -45,6 +46,7 @@ class CourseTeacher:
             
             return year,_class,cnic
 
+    '''
 #get unique id(i.e: CNIC) from user to delete the specific record one by one
     def delete_data(self):
         
@@ -134,5 +136,5 @@ class CourseTeacher:
           
         #print(_dict)
         return cnic,_dict
-        
+    '''       
         

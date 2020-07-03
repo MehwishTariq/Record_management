@@ -27,6 +27,7 @@ class StudentData:
             add = input()
             print("\nEnter Contact: ")
             contact = input()
+            #cnic is supposed to be 13 digits long therefore keep a check on it
             while True:
                 print("\nEnter CNIC: ")
                 cnic = input()
@@ -36,9 +37,11 @@ class StudentData:
                 else:
                     break
             
+            #create a dictionary to add to a list
             s_dict = {"Name": name, "Father's Name":f_name, "Gender":gen,
                              "Age": age, "Address": add,"Contact": contact,"CNIC":cnic}
             
+             #append to a list to add to db
             student_list.append(s_dict)
             
             print("\n Entered! Enter to add more users or Press 'q' to go back")
@@ -57,12 +60,10 @@ class StudentData:
         
         while True:
             
-            print("\nEnter CNIC of student to delete his/her record: ")  
-            
+            print("\nEnter CNIC of student to delete his/her record: ")              
             cnic = input()
            
-            if len(cnic) == 13 : #since cnic is 14 digits
-        
+            if len(cnic) == 13 : #since cnic is 14 digits        
                 return cnic
             
             else:
@@ -73,16 +74,14 @@ class StudentData:
     def update_data(self):
          
         _dict = {}
-        while True:
-            
-            print("\nEnter CNIC of student to update his/her record: ")  
-            
+
+        while True:            
+            print("\nEnter CNIC of student to update his/her record: ")              
             cnic = input()
            
             if len(cnic) == 13 : #since cnic is 14 digits
         
-                while True:
-                    
+                while True:                    
                     print("\nWhat would you like to update? Press\n")
                     print("1: Name")
                     print("2: Father's Name")

@@ -20,29 +20,25 @@ class Courses:
         print("\n e.g: Maths,Science,Urdu..etc")
         
         #using split as all courses are being entered in one line
-        #append in a list and then append it in another list as a dictionary
+        #append in a list as a dictionary
         
         print("\n\nFor class-I: ")
         course = input().split(',')
         record.append({"Class- I" : course})
         
         print("\nFor class-II: ")
-        #II.append(input().split(','))
         course = input().split(',')
         record.append({"Class- II" : course})
         
         print("\nFor class-III: ")
-        #III.append(input().split(','))
         course = input().split(',')
         record.append({"Class- III" : course})
         
         print("\nFor class-IV: ")
-        #IV.append(input().split(','))
         course = input().split(',')
         record.append({"Class- IV" : course})
         
         print("\nFor class-V: ")
-        #V.append(input().split(','))
         course = input().split(',')
         record.append({"Class- V" : course})
                     

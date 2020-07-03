@@ -63,6 +63,7 @@ class MongoDB:
         
         index = 0
         key = _key
+        #find the class
         mydoc = my_col.find({},{"_id":0,key:1})
         for x in mydoc:
             if len(x.keys()) == 1:
